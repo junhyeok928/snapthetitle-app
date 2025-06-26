@@ -1,16 +1,17 @@
 // src/api/adminApi.js
 import axios from 'axios';
+const BASE_URL = "/api";
 
 export async function loginAdmin({ username, password }) {
     const { data } = await axios.post(
-        `${process.env.REACT_APP_API_URL}/admin/login`,  // ✅ 절대경로로
+        `${BASE_URL}/admin/login`,  // ✅ 절대경로로
         { username, password }
     );
     return data;
 }
 
 export const adminClient = axios.create({
-    baseURL: process.env.REACT_APP_API_URL,
+    baseURL: "/api",
     headers: { 'Content-Type': 'application/json' },
 });
 

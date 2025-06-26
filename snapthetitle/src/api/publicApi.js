@@ -1,4 +1,4 @@
-const BASE_URL = process.env.REACT_APP_API_URL;
+const BASE_URL = "/api";
 
 export async function fetchGalleryPhotos() {
     const res = await fetch(`${BASE_URL}/gallery-photos`);
