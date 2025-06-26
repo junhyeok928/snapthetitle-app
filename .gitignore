@@ -1,0 +1,19 @@
+# Node
+snapthetitle/node_modules/
+snapthetitle/.env
+snapthetitle/build/
+snapthetitle/.idea/
+
+# Java
+snapthetitle-backend/.idea/
+snapthetitle-backend/.gradle/
+snapthetitle-backend/out/
+snapthetitle-backend/build/
+snapthetitle-backend/.env
+
+# Common
+uploads/
+*.log
+*.tmp
+*.DS_Store
+*.bundle

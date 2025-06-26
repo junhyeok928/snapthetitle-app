@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Gentium Book Plus
+- Font Author: undefined
+- Font Source: https://fonts.gstatic.com/s/gentiumbookplus/v1/vEFL2-RHBgUK5fbjKxRpbBtJPyRpofKfdbLOrdPV.ttf
+- Font License: undefined)

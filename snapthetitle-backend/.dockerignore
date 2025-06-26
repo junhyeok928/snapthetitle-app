@@ -1,0 +1,13 @@
+# Gradle 캐시
+.gradle
+
+# IDE
+.vscode
+.idea
+
+# Git
+.git
+.gitignore
+
+# OS
+.DS_Store
