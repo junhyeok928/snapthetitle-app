@@ -17,3 +17,4 @@ uploads/
 *.tmp
 *.DS_Store
 *.bundle
+.env
