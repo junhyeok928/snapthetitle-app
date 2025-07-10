@@ -31,7 +31,11 @@ public class SecurityConfig {
                 .cors(cors -> cors
                         .configurationSource(request -> {
                             var config = new org.springframework.web.cors.CorsConfiguration();
-                            config.setAllowedOrigins(List.of("http://localhost:3000")); // ✅ 허용할 프론트 주소
+                            config.setAllowedOrigins(List.of(
+                                    "http://localhost:3000",
+                                    "https://snapthetitle.com",
+                                    "https://www.snapthetitle.com"
+                            ));
                             config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
                             config.setAllowedHeaders(List.of("*"));
                             config.setAllowCredentials(true);
