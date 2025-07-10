@@ -65,12 +65,9 @@ const GalleryComponent = () => {
                 <div className="flex flex-col text-center w-full mb-20">
                     <div className="space-y-6">
                         <p className="lg:w-4/5 mx-auto leading-relaxed text-gray-600 text-base md:text-lg">
-                            스냅 더 타이틀의 다양한 촬영 작품들을 만나보세요.
+                            둘만의 타이틀을 담기 위해,
                             <br className="hidden sm:block" />
-                            각 촬영 장소별로 분류된 갤러리를 확인하실 수 있습니다.
-                        </p>
-                        <p className="lg:w-4/5 mx-auto leading-relaxed text-gray-600 text-base md:text-lg">
-                            소중한 순간들이 어떻게 아름답게 담겨지는지 느껴보세요.
+                            커스터마이징 촬영을 진행하고 있습니다.
                         </p>
                     </div>
                 </div>
