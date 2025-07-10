@@ -46,9 +46,9 @@ services:
     environment:
       - NODE_ENV=production
     volumes:
-      - frontend_build:/app/build
+      - ./snapthetitle/build:/app/build   # bind mount 사용
     networks:
-      - app-network
+    - app-network
 
   nginx:
     image: nginx:stable
@@ -59,14 +59,14 @@ services:
       - "443:443"
     volumes:
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
-      - frontend_build:/usr/share/nginx/html
+      - ./snapthetitle/build:/usr/share/nginx/html  # bind mount 사용
       - ./certbot/conf:/etc/letsencrypt
       - ./certbot/www:/var/www/certbot
     depends_on:
       - frontend
       - backend
     networks:
-      - app-network
+    - app-network
 
   certbot:
     image: certbot/certbot
