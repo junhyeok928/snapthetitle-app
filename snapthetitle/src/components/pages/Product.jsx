@@ -88,7 +88,11 @@ function Product() {
                 </div>
 
                 {/* 상품 목록 */}
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12 items-stretch">
+                <div
+                    className={`grid grid-cols-1 ${
+                        currentProducts.length === 4 ? 'md:grid-cols-2' : 'md:grid-cols-3'
+                    } gap-8 md:gap-12 items-stretch`}
+                >
                     {currentProducts.map((product) => (
                         <div key={product.id} className="group flex flex-col">
                             <div className="py-6 px-6 rounded-lg hover:bg-gray-50 transition h-full flex flex-col">
@@ -117,7 +121,6 @@ function Product() {
                         </div>
                     ))}
                 </div>
-
 
                 {/* 마무리 메시지 */}
                 <div className="mt-16 text-center">
