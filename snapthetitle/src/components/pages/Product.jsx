@@ -79,16 +79,24 @@ function Product() {
                             </button>
                         ))}
                     </div>
+                    {/* 2026년 선택 시 안내문구 */}
+                    {selectedYear === '2026' && (
+                        <p className="text-sm text-gray-500 mt-2">
+                            모든 상품은 VAT 별도입니다.
+                        </p>
+                    )}
                 </div>
 
                 {/* 상품 목록 */}
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12 items-stretch">
                     {currentProducts.map((product) => (
-                        <div key={product.id} className="group">
-                            <div className="py-6 px-6 rounded-lg hover:bg-gray-50 transition h-full">
-                                <div className="text-center mb-6">
+                        <div key={product.id} className="group flex flex-col">
+                            <div className="py-6 px-6 rounded-lg hover:bg-gray-50 transition h-full flex flex-col">
+                                <div className="text-center mb-6 flex-grow">
                                     <h3 className="text-lg font-medium text-gray-800 mb-2">{product.name}</h3>
-                                    <p className="text-gray-600 text-sm leading-relaxed">{product.description}</p>
+                                    <p className="text-gray-600 text-sm leading-relaxed whitespace-pre-wrap text-left">
+                                        {product.description}
+                                    </p>
                                 </div>
                                 <div className="space-y-3 mb-6">
                                     {product.options.map((opt) => (
@@ -100,15 +108,16 @@ function Product() {
                                         </div>
                                     ))}
                                 </div>
-                                <div className="text-center pt-4 border-t border-gray-200">
-                                    <span className="text-lg font-semibold text-gray-900">
-                                      {Number(product.price).toLocaleString()}원
-                                    </span>
+                                <div className="text-center pt-4 border-t border-gray-200 mt-auto">
+                                  <span className="text-lg font-semibold text-gray-900">
+                                    {Number(product.price).toLocaleString()}원
+                                  </span>
                                 </div>
                             </div>
                         </div>
                     ))}
                 </div>
+
 
                 {/* 마무리 메시지 */}
                 <div className="mt-16 text-center">

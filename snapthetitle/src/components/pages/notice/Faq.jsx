@@ -102,7 +102,7 @@ function Faq() {
                                                     <span className="inline-block bg-gray-100 text-gray-700 px-4 py-2 rounded-full text-sm font-medium self-start">
                                                         {faq.category}
                                                     </span>
-                                                    <h3 className="text-xl font-medium text-gray-800 leading-relaxed">
+                                                    <h3 className="text-xl font-medium text-gray-800 leading-relaxed leading-relaxed whitespace-pre-wrap">
                                                         {faq.question}
                                                     </h3>
                                                 </div>

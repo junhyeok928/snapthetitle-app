@@ -125,26 +125,51 @@ export default function GuideManagement() {
                     <h2 className="font-medium mb-2">상세 항목</h2>
                     {form.details.map((d, idx) => (
                         <div key={idx} className="flex space-x-2 mb-2">
-                            <input type="text" placeholder="소제목" value={d.subtitle}
-                                   onChange={e => updateDetail(idx, 'subtitle', e.target.value)}
-                                   className="p-2 border rounded flex-1" />
-                            <input type="text" placeholder="설명" value={d.description}
-                                   onChange={e => updateDetail(idx, 'description', e.target.value)}
-                                   className="p-2 border rounded flex-1" />
-                            <input type="number" placeholder="순서" min={1} value={d.displayOrder}
-                                   onChange={e => updateDetail(idx, 'displayOrder', e.target.value)}
-                                   className="p-2 border rounded w-20" />
-                            <button type="button" onClick={() => removeDetail(idx)}
-                                    className="px-2 bg-red-400 text-white rounded">
+                            <input
+                                type="text"
+                                placeholder="소제목"
+                                value={d.subtitle}
+                                onChange={e => updateDetail(idx, 'subtitle', e.target.value)}
+                                className="p-2 border rounded flex-1"
+                            />
+
+                            {/* description → textarea로 변경 */}
+                            <textarea
+                                placeholder="설명"
+                                value={d.description}
+                                onChange={e => updateDetail(idx, 'description', e.target.value)}
+                                className="p-2 border rounded flex-1 resize-none"
+                                rows={2} // 기본 2줄 높이
+                            />
+
+                            <input
+                                type="number"
+                                placeholder="순서"
+                                min={1}
+                                value={d.displayOrder}
+                                onChange={e => updateDetail(idx, 'displayOrder', e.target.value)}
+                                className="p-2 border rounded w-20"
+                            />
+
+                            <button
+                                type="button"
+                                onClick={() => removeDetail(idx)}
+                                className="px-2 bg-red-400 text-white rounded"
+                            >
                                 삭제
                             </button>
                         </div>
                     ))}
-                    <button type="button" onClick={addDetail}
-                            className="px-4 py-2 bg-green-400 text-white rounded">
+
+                    <button
+                        type="button"
+                        onClick={addDetail}
+                        className="px-4 py-2 bg-green-400 text-white rounded"
+                    >
                         상세 항목 추가
                     </button>
                 </div>
+
 
                 <div className="flex space-x-4">
                     <button type="submit" disabled={loading}

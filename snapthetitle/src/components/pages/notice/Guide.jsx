@@ -51,7 +51,7 @@ function Guide() {
                                     </div>
                                     <div className="flex-1 text-center md:text-left">
                                         <div className="text-gray-600 text-base leading-relaxed space-y-3">
-                                            <p>{item.content}</p>
+                                            <p className="leading-relaxed whitespace-pre-wrap">{item.content}</p>
 
                                             {item.linkUrl && item.linkText && (
                                                 <a
@@ -65,7 +65,7 @@ function Guide() {
                                             )}
 
                                             {item.details && item.details.length > 0 && (
-                                                <div className="mt-4 space-y-2">
+                                                <div className="mt-4 space-y-2 leading-relaxed whitespace-pre-wrap">
                                                     {item.details.map((detail, detailIndex) => (
                                                         <div key={detailIndex} className="bg-gray-50 rounded-lg p-4">
                                                             <h4 className="font-medium text-gray-800 mb-2">{detail.subtitle}</h4>

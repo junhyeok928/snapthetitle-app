@@ -78,20 +78,22 @@ export default function FaqManagement() {
                         className="p-2 border rounded"
                         required
                     />
-                    <input
+                    <textarea
                         type="text"
                         placeholder="질문"
                         value={form.question}
                         onChange={e => setForm({ ...form, question: e.target.value })}
-                        className="p-2 border rounded"
+                        className="p-2 border rounded resize-none"
+                        rows={3}
                         required
                     />
-                    <input
-                        type="text"
+                    {/* answer → textarea로 변경 */}
+                    <textarea
                         placeholder="답변"
                         value={form.answer}
                         onChange={e => setForm({ ...form, answer: e.target.value })}
-                        className="p-2 border rounded"
+                        className="p-2 border rounded resize-none"
+                        rows={3} // 기본 3줄 높이
                         required
                     />
                 </div>
