@@ -78,8 +78,8 @@ const GalleryComponent = () => {
                     <div className="text-center mb-16">
                         <h2 className="text-3xl md:text-4xl font-light text-gray-800 mb-6">Gallery</h2>
                         <div className="space-y-2 mb-8">
-                            <p className="text-gray-500 text-sm md:text-base">촬영 장소별로 분류된 작품 갤러리입니다.</p>
-                            <p className="text-gray-500 text-sm md:text-base">이미지를 클릭하면 확대해서 보실 수 있습니다.</p>
+                            <p className="text-gray-500 text-sm md:text-base">이미지를 클릭하시면 확대하여 보실 수 있으며,</p>
+                            <p className="text-gray-500 text-sm md:text-base">더 많은 사진은 Instagram에서 확인하실 수 있습니다.</p>
                         </div>
 
                         <div className="flex justify-center flex-wrap gap-3 mb-12">
@@ -183,13 +183,13 @@ const GalleryComponent = () => {
                     <div className="mt-16 text-center">
                         <div className="border-t border-gray-200 mb-12"></div>
                         <div className="space-y-6">
-                            <p className="lg:w-4/5 mx-auto leading-relaxed text-gray-600 text-base md:text-lg">
-                                더 많은 작품들과 촬영 문의는 언제든지 연락주세요.
-                                <br className="hidden sm:block" />
-                                두 분만의 특별한 순간을 함께 만들어갑니다.
-                            </p>
+                            {/*<p className="lg:w-4/5 mx-auto leading-relaxed text-gray-600 text-base md:text-lg">*/}
+                                {/*That’s why we called it Snap The Title — because every moment deserves its own chapter.*/}
+                                {/*<br className="hidden sm:block" />*/}
+                                {/*두 분만의 특별한 순간을 함께 만들어갑니다.*/}
+                            {/*</p>*/}
                             <p className="lg:w-4/5 mx-auto leading-relaxed text-gray-700 text-base md:text-lg font-medium">
-                                소중한 추억을 아름답게 기록하는 것이 저희의 약속입니다.
+                                That’s why we called it Snap The Title — because every moment deserves its own chapter.
                             </p>
                         </div>
                     </div>

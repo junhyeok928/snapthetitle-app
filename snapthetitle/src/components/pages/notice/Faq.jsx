@@ -35,9 +35,11 @@ function Faq() {
                 <div className="flex flex-col text-center w-full mb-20">
                     <div className="space-y-6">
                         <p className="lg:w-4/5 mx-auto leading-relaxed text-gray-600 text-base md:text-lg">
-                            촬영에 대해 궁금한 점들이 있으시다면 언제든지 편하게 문의해주세요.
+                            촬영에 대해 궁금한 점이 있다면 언제든 편하게 문의해 주세요.
                             <br className="hidden sm:block" />
-                            자주 묻는 질문들을 미리 확인하시면 더욱 도움이 됩니다.
+                            제가 직접 겪고 느낀 기준으로 정리한 내용이 포함되어 있으므로
+                            <br className="hidden sm:block" />
+                            정답은 아닐 수 있지만, 촬영을 준비하시며 작은 참고가 될 수 있길 바랍니다.
                         </p>
                     </div>
                 </div>
