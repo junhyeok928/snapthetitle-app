@@ -5,6 +5,9 @@ WORKDIR /app
 
 COPY . .
 
+# 🔥 프로덕션 빌드 시 소스맵 생성 비활성화
+ENV GENERATE_SOURCEMAP=false
+
 RUN npm install --legacy-peer-deps
 RUN npm run build
 
