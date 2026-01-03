@@ -1,5 +1,5 @@
 # Java 17 기반 Spring Boot 실행용
-FROM openjdk:17-jdk-slim
+FROM eclipse-temurin:17-jre-jammy
 
 WORKDIR /app
 
