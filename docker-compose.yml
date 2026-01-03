@@ -16,6 +16,9 @@ services:
       - mysql_data:/var/lib/mysql
     networks:
       - app-network
+    command:
+      - --innodb-buffer-pool-size=128M
+      - --max-connections=30
 
   backend:
     build:
@@ -30,6 +33,7 @@ services:
       SPRING_DATASOURCE_PASSWORD: ${SPRING_DATASOURCE_PASSWORD}
       FILE_UPLOAD_DIR: ${FILE_UPLOAD_DIR}
       JWT_SECRET: ${JWT_SECRET}
+      JAVA_OPTS: -Xms128m -Xmx256m
     ports:
       - "8080:8080"
     volumes:
