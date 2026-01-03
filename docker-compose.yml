@@ -40,17 +40,18 @@ services:
       - app-network
 
   frontend:
-    build:
-      context: ./snapthetitle
-      dockerfile: Dockerfile
+    image: nginx:stable
     container_name: frontend
     restart: always
     ports:
       - "80:80"
       - "443:443"
     volumes:
+      - ./snapthetitle/build:/usr/share/nginx/html:ro
+      - ./snapthetitle/nginx.conf:/etc/nginx/conf.d/default.conf:ro
       - ./certbot/conf:/etc/letsencrypt
       - ./certbot/www:/var/www/certbot
+      - ./uploads:/home/app/uploads:ro
     networks:
       - app-network
     depends_on:
