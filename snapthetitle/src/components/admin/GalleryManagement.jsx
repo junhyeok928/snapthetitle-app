@@ -189,7 +189,7 @@ export default function GalleryManagement() {
         setCategory(photo.category);
         setSelectedCategory(photo.category);
         setFiles([]);
-        const existingPreviews = photo.attachments.map(att => `${process.env.REACT_APP_API_URL}${att.fileUrl}`);
+        const existingPreviews = photo.attachments.map(att => att.fileUrl);
         setPreviews(existingPreviews);
         if (fileInputRef.current) fileInputRef.current.value = null;
     };
