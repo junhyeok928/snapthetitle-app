@@ -60,15 +60,20 @@ services:
       - app-network
     depends_on:
       - backend
+    # 갱신된 인증서를 반영하기 위해 12시간마다 nginx reload
+    command: /bin/sh -c "while :; do sleep 12h & wait $${!}; nginx -s reload; done & exec nginx -g 'daemon off;'"
 
   certbot:
     image: certbot/certbot
     container_name: certbot
+    restart: unless-stopped
     volumes:
       - ./certbot/conf:/etc/letsencrypt
       - ./certbot/www:/var/www/certbot
     networks:
       - app-network
+    # 12시간마다 갱신 시도 (certbot이 만료 30일 이내인 인증서만 실제로 갱신)
+    entrypoint: /bin/sh -c "trap exit TERM; while :; do certbot renew --webroot -w /var/www/certbot --quiet; sleep 12h & wait $${!}; done;"
 
 volumes:
   mysql_data:
